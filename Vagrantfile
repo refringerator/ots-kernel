@@ -1,7 +1,7 @@
 MACHINES = {
   :"kernel-update" => {
-    :box_name => "centos/stream8",
-    :box_version => "20210210.0",
+    :box_name => "alvistack/centos-8-stream",
+    :box_version => "20221224.1.1",
     :cpus => 2,
     :memory => 1024,
   }
