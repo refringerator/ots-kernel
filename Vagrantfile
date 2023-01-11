@@ -55,10 +55,41 @@ Vagrant.configure("2") do |config|
         yum install -y mdadm smartmontools hdparm gdisk
       SHELL
 
-      box.vm.provision "raid1", type: "shell", inline: <<-SHELL
+      box.vm.provision "raid5", type: "shell", inline: <<-SHELL
         mdadm --zero-superblock --force /dev/sd{b,c,d,e}
-        mdadm --create --verbose /dev/md0 --level=raid1 --raid-devices=4 --size=max /dev/sd{b,c,d,e}
-        cat /proc/mdstat
+        mdadm --create --verbose /dev/md0 \
+              --level=raid5 --raid-devices=4 \
+              --metadata=0.90 \
+              --size=max /dev/sd{b,c,d,e}
+        sleep 3
+        
+        echo "Creating mdadm.conf"
+        mkdir /etc/mdadm
+        echo "DEVICE partitions" > /etc/mdadm/mdadm.conf
+        mdadm --detail --scan --verbose | awk '/ARRAY/ {print}' >> /etc/mdadm/mdadm.conf
+        
+        echo "Create GPT"
+        parted -s /dev/md0 mklabel gpt
+        parted /dev/md0 mkpart primary ext4 0% 50%
+        parted /dev/md0 mkpart primary ext4 50% 100%
+
+        for i in {1..2}
+        do 
+          mkfs.ext4 /dev/md0p$i
+        done
+
+        mkdir -p /raid/part{1,2}
+        for i in {1..2}
+        do
+          mount /dev/md0p$i /raid/part$i
+        done
+        
+        echo "Add raid info to fstab"
+        for i in {1..2}
+        do
+          echo "/dev/md0p$i /raid/part$i ext4 defaults 0 0" >> /etc/fstab
+        done
+
       SHELL
 
     end
