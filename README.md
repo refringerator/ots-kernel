@@ -1,2 +1,3 @@
-# ots-kernel-update
-дз 1
+# Play with mdadm
+## Homework #2
+
