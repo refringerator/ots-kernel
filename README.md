@@ -14,3 +14,6 @@
 В письме должен быть прописан обрабатываемый временной диапазон.
 
 трапы и функции, а также sed и find +1 балл
+
+### Materials
+- [Basic examples from course](https://gitlab.com/otus_linux/stands-05-bash)
