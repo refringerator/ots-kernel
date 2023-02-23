@@ -1,17 +1,22 @@
 # OTUS Administrator Linux. Professional course 
+## HW9 Bash
 
-- [x] [HW1 Kernel update](https://github.com/refringerator/ots-kernel)
-- [x] [HW2 Working with mdadm](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
-- [ ] [HW3 Working with LVM](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
-- [ ] [HW4 Working with ZFS](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
-- [ ] [HW5 Working wiht NFS](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
-- [ ] [HW6 Creating own RPM package](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
-- [ ] [HW7 Working with bootloader](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
-- [ ] [HW8 Systemd](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
-- [ ] [HW9 Bash](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
-- [ ] [HW10 Working with processes](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
+### TODO
+Написать скрипт для CRON, который раз в час будет формировать письмо и отправлять на заданную почту.
+Необходимая информация в письме:
 
-## Useful links
-* [Jeff Geerling`s packer boxes](https://github.com/geerlingguy/packer-boxes)
-* [Alvistack`s vagrant box for CentOS](https://github.com/alvistack/vagrant-centos)
- 
+    Список IP адресов (с наибольшим кол-вом запросов) с указанием кол-ва запросов c момента последнего запуска скрипта;
+    Список запрашиваемых URL (с наибольшим кол-вом запросов) с указанием кол-ва запросов c момента последнего запуска скрипта;
+    Ошибки веб-сервера/приложения c момента последнего запуска;
+    Список всех кодов HTTP ответа с указанием их кол-ва с момента последнего запуска скрипта.
+    Скрипт должен предотвращать одновременный запуск нескольких копий, до его завершения.
+    В письме должен быть прописан обрабатываемый временной диапазон.
+    В чат ДЗ отправьте ссылку на ваш git-репозиторий . Обычно мы проверяем ДЗ в течение 48 часов.
+    Если возникнут вопросы, обращайтесь к студентам, преподавателям и наставникам в канал группы в Slack.
+    Удачи при выполнении!
+
+
+Критерии оценки:
+
+трапы и функции, а также sed и find +1 балл
+
