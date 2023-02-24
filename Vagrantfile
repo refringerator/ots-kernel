@@ -28,6 +28,7 @@ Vagrant.configure("2") do |config|
 
         box.vm.provision "packages", type: "shell", path: "scripts/01_test.sh"
         box.vm.provision "watchlog service", type: "shell", path: "scripts/02_watchlog.sh"
+        box.vm.provision "spawn-fcgi", type: "shell", path: "scripts/03_spawn-fcgi.sh"
       end
     end
   end
