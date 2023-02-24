@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
   MACHINES.each do |machine_name, machine_config|
 
     config.vm.define machine_name do |box|
-
+      box.vm.network "private_network", type: "dhcp"
       box.vm.box = machine_config[:box_name]
       box.vm.box_version = machine_config[:box_version]
       box.vm.host_name = machine_name.to_s
@@ -46,6 +46,7 @@ Vagrant.configure("2") do |config|
       end
 
       box.vm.provision "packages", type: "shell", path: "scripts/01_test.sh"
+      box.vm.provision "Host name resolving package", type: "shell", path: "scripts/02_nss-mdns.sh"
     end
   end
 end
