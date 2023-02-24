@@ -2,7 +2,7 @@
 # vim: set ft=ruby :
 
 MACHINES = {
-  :"mda" => {
+  :"awesomeVM" => {
     :box_name => "alvistack/centos-8-stream",
     :box_version => "20221224.1.1",
     :cpus => 4,
@@ -27,6 +27,7 @@ Vagrant.configure("2") do |config|
         v.cpus = machine_config[:cpus]
 
         box.vm.provision "packages", type: "shell", path: "scripts/01_test.sh"
+        box.vm.provision "watchlog service", type: "shell", path: "scripts/02_watchlog.sh"
       end
     end
   end
