@@ -7,9 +7,9 @@
 - [ ] [HW5 Working wiht NFS](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
 - [ ] [HW6 Creating own RPM package](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
 - [ ] [HW7 Working with bootloader](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
-- [ ] [HW8 Systemd](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
+- [ ] [HW8 Systemd](https://github.com/refringerator/ots-kernel/tree/hw8_systemd)
 - [ ] [HW9 Bash](https://github.com/refringerator/ots-kernel/tree/hw9_bash)
-- [ ] [HW10 Working with processes](https://github.com/refringerator/ots-kernel/tree/hw2_mdadm)
+- [ ] [HW10 Working with processes](https://github.com/refringerator/ots-kernel/tree/hw10_processes)
 
 ## Useful links
 * [Jeff Geerling`s packer boxes](https://github.com/geerlingguy/packer-boxes)
