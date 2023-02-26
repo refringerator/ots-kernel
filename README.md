@@ -17,3 +17,8 @@
 
 ### Materials
 - [Basic examples from course](https://gitlab.com/otus_linux/stands-05-bash)
+
+
+#### Optional
+1. install bwapp
+2. install nginx as reverse proxy
