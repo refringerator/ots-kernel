@@ -15,3 +15,10 @@
 * [Jeff Geerling`s packer boxes](https://github.com/geerlingguy/packer-boxes)
 * [Alvistack`s vagrant box for CentOS](https://github.com/alvistack/vagrant-centos)
  
+### Bash scripts
+```
+vagrant destroy -f && vagrant up && vagrant ssh -c "sudo -i"
+```
+```
+scp -P 2222 vagrant@127.0.0.1:/home/vagrant/typescript  .
+```
