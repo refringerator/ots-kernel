@@ -27,6 +27,7 @@ Vagrant.configure("2") do |config|
         v.cpus = machine_config[:cpus]
 
         box.vm.provision "packages", type: "shell", path: "scripts/01_test.sh"
+        box.vm.provision "packages", type: "shell", path: "scripts/02_docker.sh"
       end
     end
   end
