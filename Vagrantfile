@@ -21,6 +21,8 @@ Vagrant.configure("2") do |config|
       box.vm.box_version = machine_config[:box_version]
       box.vm.host_name = machine_name.to_s
 
+      box.vm.network "forwarded_port", guest: 80, host: 8081
+      box.vm.network "forwarded_port", guest: 3000, host: 8082
       box.vm.provider "virtualbox" do |v|
         v.name = machine_name.to_s
         v.memory = machine_config[:memory]
