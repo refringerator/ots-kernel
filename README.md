@@ -10,6 +10,9 @@
 - [x] [HW8 Systemd](https://github.com/refringerator/ots-kernel/tree/hw8_systemd)
 - [ ] [HW9 Bash](https://github.com/refringerator/ots-kernel/tree/hw9_bash)
 - [x] [HW10 Working with processes](https://github.com/refringerator/ots-kernel/tree/hw10_processes)
+- [ ] [HW11 Ansible](https://github.com/refringerator/ots-kernel/tree/hw9_bash)
+- [ ] [HW12 SELinux](https://github.com/refringerator/ots-kernel/tree/hw9_bash)
+- [ ] [HW13 Docker](https://github.com/refringerator/ots-kernel/tree/hw13_docker)
 
 ## Useful links
 * [Jeff Geerling`s packer boxes](https://github.com/geerlingguy/packer-boxes)
