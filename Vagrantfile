@@ -28,8 +28,10 @@ Vagrant.configure("2") do |config|
         v.memory = machine_config[:memory]
         v.cpus = machine_config[:cpus]
 
+        box.vm.provision "nginx.conf", type: "file", source: "scripts/nginx.conf", destination: "nginx.conf" 
         box.vm.provision "packages", type: "shell", path: "scripts/01_test.sh"
-        box.vm.provision "packages", type: "shell", path: "scripts/02_docker.sh"
+        box.vm.provision "docker", type: "shell", path: "scripts/02_docker.sh"
+        box.vm.provision "nginx", type: "shell", path: "scripts/03_nginx.sh"
       end
     end
   end
